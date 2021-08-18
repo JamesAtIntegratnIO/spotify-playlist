@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     spotify = {
-      version = "~> 0.2.5"
+      version = "~> 0.2.6"
       source  = "conradludgate/spotify"
     }
   }
@@ -38,6 +38,7 @@ resource "spotify_playlist" "playlist" {
     data.spotify_track.nirvana_heart_shaped_box.id,
     data.spotify_track.three_eleven_all_mixed_up.id,
     data.spotify_track.red_hot_chili_peppers_californication.id,
+    data.spotify_track.avenged_sevenfold_malaguena_salerosa.id,
   ]
 }
 
@@ -91,4 +92,7 @@ data "spotify_track" "three_eleven_all_mixed_up" {
 }
 data "spotify_track" "red_hot_chili_peppers_californication" {
   spotify_id="48UPSzbZjgc449aqz8bxox"
+}
+data "spotify_track" "avenged_sevenfold_malaguena_salerosa" {
+  spotify_id="2oZSBEtzUtq70iQwpNjrnk"
 }
