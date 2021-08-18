@@ -37,7 +37,7 @@ resource "spotify_playlist" "playlist" {
     data.spotify_track.state_champ_stitches.id,
     data.spotify_track.nirvana_heart_shaped_box.id,
     data.spotify_track.three_eleven_all_mixed_up.id,
-    data.spotify_track.red_hot_chilli_peppers_californication.id,
+    data.spotify_track.red_hot_chili_peppers_californication.id,
   ]
 }
 
@@ -89,6 +89,6 @@ data "spotify_track" "nirvana_heart_shaped_box" {
 data "spotify_track" "three_eleven_all_mixed_up" {
   spotify_id="18ZOH3KKu5Elt5ysocFyX4" 
 }
-data "spotify_track" "red_hot_chilli_peppers_californication" {
+data "spotify_track" "red_hot_chili_peppers_californication" {
   spotify_id="48UPSzbZjgc449aqz8bxox"
 }
