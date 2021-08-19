@@ -39,9 +39,56 @@ resource "spotify_playlist" "playlist" {
     data.spotify_track.three_eleven_all_mixed_up.id,
     data.spotify_track.red_hot_chili_peppers_californication.id,
     data.spotify_track.avenged_sevenfold_malaguena_salerosa.id,
+    data.spotify_track.pearl_jam_even_flow.id,
+    data.spotify_track.smashing_pumpkins_cherub_rock.id,
+    data.spotify_track.matchbox_twenty_push.id,
+    data.spotify_track.live_lightning_crashes.id,
+    data.spotify_track.soundgarden_black_hole_sun.id,
+    data.spotify_track.counting_crows_mr_jones.id,
+    data.spotify_track.live_i_alone.id,
+    data.spotify_track.red_hot_chili_peppers_scar_tissue.id,
+    data.spotify_track.weezer_say_it_aint_so.id,
+    data.spotify_track.marcy_playground_sex_and_candy.id,
+    data.spotify_track.alice_in_chains_would.id,
   ]
 }
-
+data "spotify_track" "pearl_jam_even_flow"  {
+  spotify_id="6QewNVIDKdSl8Y3ycuHIei"
+}
+data "spotify_track" "smashing_pumpkins_cherub_rock" {
+  spotify_id="3ow0TQVttXQF8rLckmXgRx"
+}
+data "spotify_track" "matchbox_twenty_push" {
+  spotify_id="2KVwlelhxKUy8LVV6JypH3"
+}
+data "spotify_track" "live_lightning_crashes" {
+  spotify_id="48iWbsOaBUAGzMdoSmqyg1"
+}
+data "spotify_track" "soundgarden_black_hole_sun" {
+  spotify_id="7fURZRPkB2S70sYR1naKTK"
+}
+data "spotify_track" "counting_crows_mr_jones" {
+  spotify_id="5DiXcVovI0FcY2s0icWWUu"
+}
+data "spotify_track" "live_i_alone" {
+  spotify_id="3LpnzPxkMI6XS4JCbhNeek"
+}
+data "spotify_track" "red_hot_chili_peppers_scar_tissue" {
+  spotify_id="1G391cbiT3v3Cywg8T7DM1"
+}
+data "spotify_track" "weezer_say_it_aint_so" {
+  spotify_id="6VoIBz0VhCyz7OdEoRYDiA"
+}
+data "spotify_track" "marcy_playground_sex_and_candy" {
+  spotify_id="5mkGfmJGFZpwK9nA5amOhv"
+}
+data "spotify_track" "alice_in_chains_would" {
+  spotify_id="5sFDReWLrZHLFZFjHsjUTS"
+}
+# data "spotify_track" "" {
+#   spotify_id=""
+# }
+# Already added
 data "spotify_track" "chris_cornell_patience" { 
   spotify_id="7n3u7RrzdXGVcclBEp9aSa"
 }
