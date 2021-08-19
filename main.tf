@@ -1,24 +1,7 @@
-terraform {
-  required_providers {
-    spotify = {
-      version = "~> 0.2.6"
-      source  = "conradludgate/spotify"
-    }
-  }
-}
-
-variable "spotify_api_key" {
-  type = string
-}
-
-provider "spotify" {
-  api_key = var.spotify_api_key
-}
-
 resource "spotify_playlist" "playlist" {
-  name        = "James' Jams"
-  description = "Jams for James to Jam to"
-  public      = false
+  name        = "My Jams"
+  description = "Jams for Jammin out to"
+  public      = true
 
   tracks = [
     data.spotify_track.chris_cornell_patience.id,
@@ -58,7 +41,6 @@ resource "spotify_playlist" "playlist" {
     data.spotify_track.garbage_only_happy_when_it_rains.id
   ]
 }
-
 data "spotify_track" "the_black_crows_she_talks_to_angels" {
   spotify_id="5NK8jad728pj6YeqM5VJD4"
 }
