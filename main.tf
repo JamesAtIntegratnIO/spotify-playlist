@@ -50,8 +50,34 @@ resource "spotify_playlist" "playlist" {
     data.spotify_track.weezer_say_it_aint_so.id,
     data.spotify_track.marcy_playground_sex_and_candy.id,
     data.spotify_track.alice_in_chains_would.id,
+    data.spotify_track.the_black_crows_she_talks_to_angels.id,
+    data.spotify_track.ghost_dance_macabre.id,
+    data.spotify_track.beastie_boys_sabotage.id,
+    data.spotify_track.toadies_possum_kingdom.id,
+    data.spotify_track.the_presidents_of_the_united_states_of_america_peaches.id,
+    data.spotify_track.garbage_only_happy_when_it_rains.id
   ]
 }
+
+data "spotify_track" "the_black_crows_she_talks_to_angels" {
+  spotify_id="5NK8jad728pj6YeqM5VJD4"
+}
+data "spotify_track" "ghost_dance_macabre" {
+  spotify_id="1E2WTcYLP1dFe1tiGDwRmT"
+}
+data "spotify_track" "beastie_boys_sabotage" {
+  spotify_id="0Puj4YlTm6xNzDDADXHMI9"
+}
+data "spotify_track" "toadies_possum_kingdom" {
+  spotify_id="56SkdBKyR2zOkjk6wVFI9s"
+}
+data "spotify_track" "the_presidents_of_the_united_states_of_america_peaches" {
+  spotify_id="3VEFybccRTeWSZRkJxDuNR"
+}
+data "spotify_track" "garbage_only_happy_when_it_rains" {
+  spotify_id="1IsGA5ceSC4a5nxgAEYnQd"
+}
+# Already added
 data "spotify_track" "pearl_jam_even_flow"  {
   spotify_id="6QewNVIDKdSl8Y3ycuHIei"
 }
@@ -85,10 +111,6 @@ data "spotify_track" "marcy_playground_sex_and_candy" {
 data "spotify_track" "alice_in_chains_would" {
   spotify_id="5sFDReWLrZHLFZFjHsjUTS"
 }
-# data "spotify_track" "" {
-#   spotify_id=""
-# }
-# Already added
 data "spotify_track" "chris_cornell_patience" { 
   spotify_id="7n3u7RrzdXGVcclBEp9aSa"
 }
