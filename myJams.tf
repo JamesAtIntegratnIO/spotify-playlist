@@ -3,42 +3,191 @@ resource "spotify_playlist" "playlist" {
   description = "Jams for Jammin out to"
   public      = true
 
-  tracks = [
-    data.spotify_track.chris_cornell_patience.id,
-    data.spotify_track.temple_of_the_dog_hunger_strike.id,
-    data.spotify_track.foo_fighters_up_in_arms.id,
-    data.spotify_track.pearl_jam_better_man.id,
-    data.spotify_track.we_came_as_romans_glad_you_came.id,
-    data.spotify_track.as_i_lay_dying_my_own_grave.id,
-    data.spotify_track.stone_sour_through_glass.id,
-    data.spotify_track.foo_fighters_see_you.id,
-    data.spotify_track.eagles_hotel_california.id,
-    data.spotify_track.led_zeppelin_going_to_california.id,
-    data.spotify_track.as_i_lay_dying_the_darkest_nights.id,
-    data.spotify_track.zz_top_la_grange.id,
-    data.spotify_track.state_champ_stitches.id,
-    data.spotify_track.nirvana_heart_shaped_box.id,
-    data.spotify_track.three_eleven_all_mixed_up.id,
-    data.spotify_track.red_hot_chili_peppers_californication.id,
-    data.spotify_track.chris_cornell_nothing_compares_2_u.id,
-    data.spotify_track.avenged_sevenfold_malaguena_salerosa.id,
-    data.spotify_track.pearl_jam_even_flow.id,
-    data.spotify_track.smashing_pumpkins_cherub_rock.id,
-    data.spotify_track.matchbox_twenty_push.id,
-    data.spotify_track.live_lightning_crashes.id,
-    data.spotify_track.soundgarden_black_hole_sun.id,
-    data.spotify_track.counting_crows_mr_jones.id,
-    data.spotify_track.live_i_alone.id,
-    data.spotify_track.red_hot_chili_peppers_scar_tissue.id,
-    data.spotify_track.weezer_say_it_aint_so.id,
-    data.spotify_track.marcy_playground_sex_and_candy.id,
-    data.spotify_track.alice_in_chains_would.id,
-    data.spotify_track.the_black_crows_she_talks_to_angels.id,
-    data.spotify_track.ghost_dance_macabre.id,
-    data.spotify_track.beastie_boys_sabotage.id,
-    data.spotify_track.toadies_possum_kingdom.id,
-    data.spotify_track.the_presidents_of_the_united_states_of_america_peaches.id,
-    data.spotify_track.garbage_only_happy_when_it_rains.id
-  ]
+  tracks = [for t in local.rock_tracks : t.track_id]
 }
 
+locals {
+  rock_tracks = [
+    {
+      artist = "Guns N Roses",
+      song   = "Sweet Child of Mine",
+      track_id  = "7snQQk1zcKl8gZ92AnueZW",
+    },
+    {
+      artist = "Blind Melon",
+      song   = "No Rain",
+      track_id  = "6txWz9UapYHVxEd7dDIHXT",
+    },
+    {
+      artist = "Avenged Sevenfold",
+      song   = "Malaguena Salerosa",
+      track_id  = "2oZSBEtzUtq70iQwpNjrnk",
+    },
+    {
+      artist = "Red Hot Chili Peppers",
+      song   = "Californication",
+      track_id  = "48UPSzbZjgc449aqz8bxox",
+    },
+    {
+      artist = "Three Eleven",
+      song   = "All Mixed Up",
+      track_id  = "18ZOH3KKu5Elt5ysocFyX4",
+    },
+    {
+      artist = "Nirvana",
+      song   = "Heart Shaped Box",
+      track_id  = "11LmqTE2naFULdEP94AUBa",
+    },
+    {
+      artist = "State Champ",
+      song   = "Stitches",
+      track_id  = "5rQQaAUU86ulQ4uZIyS1hp",
+    },
+    {
+      artist = "ZZ Top",
+      song   = "La Grange",
+      track_id  = "70YvYr2hGlS01bKRIho1HM",
+    },
+    {
+      artist = "Foo Fighters",
+      song   = "See You",
+      track_id  = "48PrL49eJ5P15yTxjK0oW6",
+    },
+    {
+      artist = "Eagles",
+      song   = "Hotel California",
+      track_id  = "40riOy7x9W7GXjyGp4pjAv",
+    },
+    {
+      artist = "Led Zeppelin",
+      song   = "Going to California",
+      track_id  = "1YVc2NJBwOtAebQiSUbt5T",
+    },
+    {
+      artist = "Chris Cornell",
+      song   = "Patience",
+      track_id  = "7n3u7RrzdXGVcclBEp9aSa",
+    },
+    {
+      artist = "Temple of the Dog",
+      song   = "Hunger Strike",
+      track_id  = "0W7AbEauB7cP4pidLclApe",
+    },
+    {
+      artist = "Chris Cornell",
+      song   = "Nothing Compares 2 U",
+      track_id  = "65mnqRK6fcQWpgNV2UibqM",
+    },
+    {
+      artist = "Foo Fighers",
+      song   = "Up in Arms",
+      track_id  = "05TcC5ZN9rp8Glx8A9C2Nd",
+    },
+    {
+      artist = "Stone Sour",
+      song = "Through Glass",
+      track_id = "5NeIONQWJ25uPylJBJiO4c",
+    },
+    {
+      artist = "As I Lay Dying",
+      song = "The Darkest Nights",
+      track_id = "5URJEznfi3XiVHQCyC3sII",
+    },
+    {
+      artist = "As I Lay Dying",
+      song = "My Own Grave",
+      track_id = "0CcqWuAEJC93K8cBMbAjgI",
+    },
+    {
+      artist = "We Came As Romans",
+      song = "Glad You Came",
+      track_id = "4rIoGk5qkn0yRDshvHVyjb",
+    },
+    {
+      artist = "Pear Jam",
+      song = "Better Man",
+      track_id = "2B98ljvzqpCVgt5reTHq28",
+    },
+    {
+      artist = "Alice In Chains",
+      song = "Would",
+      track_id = "5sFDReWLrZHLFZFjHsjUTS",
+    },
+    {
+      artist = "Marcy Playground",
+      song = "Sex and Candy",
+      track_id = "5mkGfmJGFZpwK9nA5amOhv",
+    },
+    {
+      artist = "Wheezer",
+      song = "Say It Aint So",
+      track_id = "6VoIBz0VhCyz7OdEoRYDiA",
+    },
+    {
+      artist = "Red Hot Chili Peppers",
+      song = "Scar Tissue",
+      track_id = "1G391cbiT3v3Cywg8T7DM1",
+    },
+    {
+      artist = "Live",
+      song = "I Alone",
+      track_id = "3LpnzPxkMI6XS4JCbhNeek",
+    },
+    {
+      artist = "Counting Crows",
+      song = "Mr. Jones",
+      track_id = "5DiXcVovI0FcY2s0icWWUu",
+    },
+    {
+      artist = "Soundgarden",
+      song = "Black Hole Sun",
+      track_id = "7fURZRPkB2S70sYR1naKTK",
+    },
+    {
+      artist = "Live",
+      song = "Lightning Crashes",
+      track_id = "48iWbsOaBUAGzMdoSmqyg1",
+    },
+    {
+      artist = "Matchbox Twenty",
+      song = "Push",
+      track_id = "2KVwlelhxKUy8LVV6JypH3"
+    },
+    {
+      artist = "Smashing Pumpkins",
+      song = "Cherub Rock",
+      track_id = "3ow0TQVttXQF8rLckmXgRx",
+    },
+    {
+      artist = "Pearl Jam",
+      song = "Even Flow",
+      track_id = "6QewNVIDKdSl8Y3ycuHIei",
+    },
+    {
+      artist = "Garbage",
+      song = "I'm Only Happy When It Rains",
+      track_id = "1IsGA5ceSC4a5nxgAEYnQd",
+    },
+    {
+      artist = "The Presidents of the United States of America",
+      song = "Peaches",
+      track_id = "3VEFybccRTeWSZRkJxDuNR",
+    },
+    {
+      artist = "Toadies",
+      song = "Possum Kingdom",
+      track_id = "56SkdBKyR2zOkjk6wVFI9s",
+    },
+    {
+      artist = "Beastie Boys",
+      song = "Sabatoge",
+      track_id = "0Puj4YlTm6xNzDDADXHMI9",
+    },
+    {
+      artist = "The Black Crows",
+      song = "She Talks To Angels",
+      track_id = "5NK8jad728pj6YeqM5VJD4"
+    }
+
+  ]
+}
