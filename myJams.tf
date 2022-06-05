@@ -192,6 +192,11 @@ locals {
       artist   = "Black Stone Cherry",
       song     = "Give Me One Reason",
       track_id = "7ferG7w5KTSi5xr5ht72Kf"
+    },
+    {
+      artist = "Me First and the Gimme Gimmes",
+      song = "Straight Up",
+      track_id = "4nieHMhWmK1fzeythfX7Vr"
     }
   ]
 }
