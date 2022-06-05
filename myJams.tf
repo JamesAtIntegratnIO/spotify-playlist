@@ -197,6 +197,51 @@ locals {
       artist = "Me First and the Gimme Gimmes",
       song = "Straight Up",
       track_id = "4nieHMhWmK1fzeythfX7Vr"
+    },
+    {
+      artist = "Days of the New",
+      song = "Touch, Peel, and Stand",
+      track_id = "2eG7o3BfbzohiETArwsX1K",
+    },
+    {
+      artist = "Stone Temple Pilots",
+      song = "Plush"
+      track_id = "3jJZVeExYzVYiV6Y9Fl3DX",
+    },
+    {
+      artist = "Audioslave",
+      song = "Show Me How to Live",
+      track_id = "21tuvt3CXIsNquc32v8jpc",
+    },
+    {
+      artist = "Alice In Chains",
+      song = "Man in the Box",
+      track_id = "6gZVQvQZOFpzIy3HblJ20F",
+    },
+    {
+      artist = "Alice In Chains",
+      song = "No Excuses",
+      track_id = "4PtZE0h5oyPhCtPjg3NeYQ",
+    },
+    {
+      artist = "Live",
+      song = "All Over You",
+      track_id = "0sqE6XPi9VAaWl5NxDyMQK",
+    },
+    {
+      artist = "Fuel",
+      song = "Shimmer",
+      track_id = "74KI6d8jEM2zwOAo3luayU",
+    },
+    {
+      artist = "Staind",
+      song = "It's Been Awhile",
+      track_id = "1BExV8JprNJLvLeDE9qdEW",
+    },
+    {
+      artist = "Blues Traveler",
+      song = "Hook",
+      track_id = "27IRo2rYeizhRMDaNVplNM",
     }
   ]
 }
