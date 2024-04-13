@@ -1,1 +1,4 @@
 spotify_api_key = "..."
+factories_config = {
+  playlists_path = "playlists"
+}
